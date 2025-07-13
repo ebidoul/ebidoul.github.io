@@ -18,12 +18,40 @@
         p {
             font-size: 1.1em;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        @keyframes firework {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+                text-shadow: 0 0 0px rgba(255, 255, 0, 0);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.1);
+                text-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+            }
+            100% {
+                opacity: 1; /* Keep visible */
+                transform: scale(1);
+                text-shadow: 0 0 0px rgba(255, 255, 0, 0);
+            }
         }
         h1 {
-            animation: fadeIn 2s ease-in-out;
+            animation: firework 1.5s ease-out forwards; /* Adjust duration and timing as needed */
+        }
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        p, h2 {
+            animation: fadeOut 1s ease-out 2s forwards; /* 1s duration, starts after 2s delay */
+        }
+        @keyframes reappearSmallPink {
+            0% { opacity: 0; transform: scale(1); color: #333; }
+            100% { opacity: 1; transform: scale(0.5); color: pink; }
+        }
+        p, h2 {
+            animation: fadeOut 1s ease-out 2s forwards, /* Fade out: 1s duration, starts after 2s delay */
+                       reappearSmallPink 0.5s ease-in 3s forwards; /* Reappear: 0.5s duration, starts after 3s delay (2s + 1s) */
         }
     </style>
 </head>
