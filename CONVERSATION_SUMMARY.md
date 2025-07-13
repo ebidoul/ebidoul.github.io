@@ -26,3 +26,4 @@ This document summarizes the key steps and changes made during the setup and mod
 
 ## Git Operations
 -   Throughout the process, `git add .`, `git commit`, and `git push origin main` commands were used to update the repository.
+-   Added a `README.md` file to the repository.
