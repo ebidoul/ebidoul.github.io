@@ -27,3 +27,17 @@ This document summarizes the key steps and changes made during the setup and mod
 ## Git Operations
 -   Throughout the process, `git add .`, `git commit`, and `git push origin main` commands were used to update the repository.
 -   Added a `README.md` file to the repository.
+
+## Major Design Overhaul (The "Future of AI" Update)
+-   **Visual Redesign**: Completely replaced the basic layout with a modern, dark-themed portfolio.
+    -   Implemented a "Future of AI" aesthetic with deep blue backgrounds and neon gradients.
+    -   Added a sticky navigation bar with a glowing GitHub button.
+    -   Created a Hero section with a floating 3D-style robot image and animated headlines.
+    -   Added a glassmorphism "About Me" card.
+-   **Typography**: Switched to the 'Outfit' Google Font for a clean, geometric look.
+-   **Readability Improvements**:
+    -   Increased base font size to 18px.
+    -   Scaled up headlines, buttons, and navigation text for better accessibility.
+-   **Fixes**:
+    -   Removed the old "shrink to pink" animations.
+    -   Added a version query parameter (`?v=2`) to the CSS link to force a cache refresh and ensure users see the new design immediately.
